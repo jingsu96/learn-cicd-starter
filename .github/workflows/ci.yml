@@ -26,5 +26,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Lint
-        run: go fmt ./...
-        continue-on-error: true
+        run: test -z "$(go fmt ./...)"
